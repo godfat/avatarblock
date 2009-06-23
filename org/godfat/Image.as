@@ -1,7 +1,7 @@
 
 package org.godfat{
 import flash.display.DisplayObject;
-import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
 import flash.display.Loader;
 import flash.net.URLRequest;
 import flash.events.Event;
@@ -9,7 +9,7 @@ import flash.events.IOErrorEvent;
 
 public class Image{
   static public var ie_hack: Boolean = false;
-  public function Image(uri: String, parent: DisplayObjectContainer,
+  public function Image(uri: String, parent: Sprite,
     width: Number, height: Number,
     callback: Function = null)
   {
@@ -50,7 +50,7 @@ public class Image{
     parent_ = null;
   }
 
-  private var parent_: DisplayObjectContainer;
+  private var parent_: Sprite;
   private var body_: Loader;
   private var width_: Number;
   private var height_: Number;

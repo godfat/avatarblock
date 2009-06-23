@@ -18,7 +18,7 @@ import org.godfat.avatar_block.Master;
 import org.godfat.avatar_block.Option;
 import org.godfat.Helper;
 import de.polygonal.ds.Array2;
-import flash.display.DisplayObjectContainer;
+import flash.display.Sprite;
 import flash.xml.XMLNode;
 import flash.utils.setTimeout;
 
@@ -26,7 +26,7 @@ public class PrivateBlock{
   // public static const Width: int = 3;
   // public static const Height: int = 2;
   // public static const Size: int = Width*Height;
-  function PrivateBlock(source: XMLNode, parent: DisplayObjectContainer, option: Option)
+  function PrivateBlock(source: XMLNode, parent: Sprite, option: Option)
   {
     source_ = source;
     parent_ = parent;
@@ -143,7 +143,7 @@ public class PrivateBlock{
   }
 
   private var source_: XMLNode;
-  private var parent_: DisplayObjectContainer;
+  private var parent_: Sprite;
   private var masters_: Array;
   private var avatars_: Array2;
   private var imp_: BlockImp;

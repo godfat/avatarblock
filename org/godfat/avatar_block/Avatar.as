@@ -2,7 +2,6 @@
 package org.godfat.avatar_block{
 import org.godfat.Image;
 import org.godfat.Helper;
-import flash.display.DisplayObjectContainer;
 import flash.display.Sprite;
 import flash.net.URLRequest;
 import flash.utils.setInterval;
@@ -16,13 +15,13 @@ public class Avatar{
   // public static const Height: Number = 50;
   // public static const BlockWidth: Number = Width + BorderWidth;
   // public static const BlockHeight: Number = Height + BorderHeight;
-  public function Avatar(owner: Master, parent: DisplayObjectContainer,
+  public function Avatar(owner: Master, parent: Sprite,
     option: Option, callback: Function = null, x: Number = 0, y: Number = 0)
   {
     owner_ = owner;
     parent_ = parent;
     option_ = option;
-    body_ = DisplayObjectContainer(parent_.addChild(new Sprite()));
+    body_ = Sprite(parent_.addChild(new Sprite()));
     img_ = new Image(owner_.avatar_uri, body_, option_.avatar_width, option_.avatar_height, callback);
     img_.mask = new Mask();
 
@@ -145,8 +144,8 @@ public class Avatar{
   }
 
   private var owner_: Master;
-  private var parent_: DisplayObjectContainer;
-  private var body_: DisplayObjectContainer;
+  private var parent_: Sprite;
+  private var body_: Sprite;
   private var img_: Image;
   private var option_: Option;
 }
