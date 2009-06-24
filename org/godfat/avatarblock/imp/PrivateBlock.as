@@ -16,7 +16,7 @@ package org.godfat.avatarblock.imp{
 import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Option;
-import org.godfat.Helper;
+import org.godfat.avatarblock.Helper;
 import de.polygonal.ds.Array2;
 import flash.display.Sprite;
 import flash.xml.XMLNode;

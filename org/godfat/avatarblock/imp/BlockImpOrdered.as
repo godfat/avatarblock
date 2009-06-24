@@ -1,8 +1,8 @@
 
 package org.godfat.avatarblock.imp{
 import org.godfat.avatarblock.Avatar;
-import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Block;
+import org.godfat.avatarblock.Master;
 import flash.utils.setTimeout;
 
 public class BlockImpOrdered extends BlockImp{

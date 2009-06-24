@@ -1,7 +1,7 @@
 
 package org.godfat.avatarblock.imp{
-import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Block;
+import org.godfat.avatarblock.Master;
 
 public class BlockImpStatic extends BlockImp{
   static public function make_imp(block: Block): BlockImp{ return new BlockImpStatic(block); }

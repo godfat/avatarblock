@@ -1,8 +1,8 @@
 
 package org.godfat.avatarblock.imp{
-import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Block;
+import org.godfat.avatarblock.Master;
 
 public class BlockImp{
   // add this factory method to your imp class
