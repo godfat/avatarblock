@@ -25,7 +25,7 @@ public class BlockImp{
   protected function get block_count(): int{ return block.count; }
   protected function block_work(picked: Avatar, region: int = -1, direct: int = -1){
     block.work(picked, region, direct);
-	}
+  }
   protected function block_clear_avatars(): BlockImp{
     block.clear_avatars();
     return this;
