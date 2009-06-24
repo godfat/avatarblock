@@ -62,5 +62,3 @@ public class Option{
 }
 
 }
-
-class Dummy{}
