@@ -12,7 +12,7 @@
 // 8. remove the out.
 // 9. back to 0.
 
-package org.godfat.avatarblock.block_imps{
+package org.godfat.avatarblock.imp{
 import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Option;

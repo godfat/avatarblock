@@ -1,6 +1,6 @@
 
 package org.godfat.avatarblock{
-import org.godfat.avatarblock.block_imps.BlockImpRandom;
+import org.godfat.avatarblock.imp.BlockImpRandom;
 import flash.utils.Dictionary;
 
 public class Option{
