@@ -15,7 +15,6 @@ public class BlockImp{
   //      e.g., private c'tor, friend class, etc.
   public function work(){ throw new ArgumentError("don't even call this."); }
   public function pick_master(): Master{ return undefined; }
-  //
 
   private function get block(): Block{ return block_; }
 

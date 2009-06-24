@@ -9,11 +9,7 @@ public class Master{
   static public function make_master(data: XMLNode): Master{ return new Master(data); }
   static public function fake_master(): Master{
     var xml: XMLDocument = new XMLDocument();
-    xml.ignoreWhite = true;
-    xml.parseXML(
-      "<Master>" +
-      "  <img rdf:resource=\"\"/>" +
-      "</Master>");
+    xml.parseXML('<avatar><img src=""/></avatar>');
     return make_master(xml.childNodes[0]);
   }
 
