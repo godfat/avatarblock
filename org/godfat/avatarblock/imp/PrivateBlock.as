@@ -16,7 +16,7 @@ package org.godfat.avatarblock.imp{
 import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Option;
-import org.godfat.avatarblock.Helper;
+import org.godfat.avatarblock.Util;
 import org.godfat.avatarblock.Array2;
 import flash.display.Sprite;
 import flash.xml.XMLNode;
@@ -118,16 +118,16 @@ public class PrivateBlock{
   }
   internal function fake_master(): Master{ return fake_master_; }
   private  function pick_master(): Master{ return imp_.pick_master(); }
-  internal function pick_region(): int{ return Helper.rand(count-xcount-ycount+1); }
+  internal function pick_region(): int{ return Util.rand(count-xcount-ycount+1); }
   private  function pick_shadow(region: int): Array{
     const result: Array = new Array();
     for(var i=0; i<4; ++i) // for all direct
       result.push(this.pick_zombie(region, i));
     return result;
   }
-  internal function pick_direct(): int{ return Helper.rand(4); }
+  internal function pick_direct(): int{ return Util.rand(4); }
   private  function pick_zombie(region: int, direct: int): Avatar{
-    const xy: Array = Helper.for_xy(region, direct, xcount);
+    const xy: Array = Util.for_xy(region, direct, xcount);
     return avatars_.get(xy[0], xy[1]);
   }
 
@@ -137,7 +137,7 @@ public class PrivateBlock{
     direct: int,
     zombie: Avatar)
   {
-    const xy: Array = Helper.for_xy(region, direct, xcount);
+    const xy: Array = Util.for_xy(region, direct, xcount);
     avatars_.set(xy[0], xy[1], picked);
     zombie.cleanup();
   }

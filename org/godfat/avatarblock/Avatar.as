@@ -74,15 +74,15 @@ public class Avatar{
   public function expand(region: int){
     body_.width = option_.avatar_width*2 + option_.spacer_width +1;
     body_.height = option_.avatar_height*2 + option_.spacer_height +1;
-    const xy: Array = Helper.for_xy(region, 0, option_.block_xcount);
+    const xy: Array = Util.for_xy(region, 0, option_.block_xcount);
     move(xy[0]*option_.avatarblock_width, xy[1]*option_.avatarblock_height);
   }
   public function slide_to(direct: int, callback: Function = null){
-    // see Helper#x_offset/y_offset
-    const target_x: int = body_.x + option_.spacer_width + option_.avatar_width*Helper.x_offset(direct);
-    const target_y: int = body_.y + option_.spacer_height + option_.avatar_height*Helper.y_offset(direct);
-    body_.x -= Helper.x_offset(direct);
-    body_.y -= Helper.y_offset(direct);
+    // see Util#x_offset/y_offset
+    const target_x: int = body_.x + option_.spacer_width + option_.avatar_width*Util.x_offset(direct);
+    const target_y: int = body_.y + option_.spacer_height + option_.avatar_height*Util.y_offset(direct);
+    body_.x -= Util.x_offset(direct);
+    body_.y -= Util.y_offset(direct);
 
     const pid: int = setInterval(function(){
       if( is_slide_done() ){

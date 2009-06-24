@@ -3,7 +3,7 @@ package org.godfat.avatarblock{
 import flash.utils.Dictionary;
 import flash.xml.XMLNode;
 
-public class Helper{
+public class Util{
   static public function strip(s: String): String{
     return s.replace(/^\s+/g, "").replace(/\s+$/g, "");
   }
@@ -18,7 +18,7 @@ public class Helper{
   static public function shuffle(a: Array): Array{
     const s: int = a.length
     for(var j: int = 0; j<s; ++j){
-      const i: int = Helper.rand(s-j)
+      const i: int = Util.rand(s-j)
       const tmp: * = a[j]
       a[j] = a[j+i]
       a[j+i] = tmp

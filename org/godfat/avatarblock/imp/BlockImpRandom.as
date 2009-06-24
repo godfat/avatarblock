@@ -3,7 +3,7 @@ package org.godfat.avatarblock.imp{
 import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Block;
 import org.godfat.avatarblock.Master;
-import org.godfat.avatarblock.Helper;
+import org.godfat.avatarblock.Util;
 import flash.utils.setTimeout;
 
 public class BlockImpRandom extends BlockImp{
@@ -16,7 +16,7 @@ public class BlockImpRandom extends BlockImp{
     });
   }
   public override function pick_master(): Master{
-    return block_masters[Helper.rand(block_masters.length)];
+    return block_masters[Util.rand(block_masters.length)];
   }
 }
 

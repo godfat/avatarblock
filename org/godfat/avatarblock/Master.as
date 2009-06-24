@@ -20,7 +20,7 @@ public class Master{
   public function Master(source: XMLNode = null){
     source_ = source;
     data_ = new Dictionary();
-    Helper.loadXML(data_, source_);
+    Util.loadXML(data_, source_);
   }
   public function attr(name: String){ return data_[name]; }
   public function get avatar_uri(): String{ return ""; }
