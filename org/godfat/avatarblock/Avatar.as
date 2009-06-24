@@ -1,7 +1,5 @@
 
 package org.godfat.avatarblock{
-import org.godfat.Image;
-import org.godfat.Helper;
 import flash.display.Sprite;
 import flash.net.URLRequest;
 import flash.utils.setInterval;
