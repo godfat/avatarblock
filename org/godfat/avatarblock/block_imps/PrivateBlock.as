@@ -12,10 +12,10 @@
 // 8. remove the out.
 // 9. back to 0.
 
-package org.godfat.avatar_block.block_imps{
-import org.godfat.avatar_block.Avatar;
-import org.godfat.avatar_block.Master;
-import org.godfat.avatar_block.Option;
+package org.godfat.avatarblock.block_imps{
+import org.godfat.avatarblock.Avatar;
+import org.godfat.avatarblock.Master;
+import org.godfat.avatarblock.Option;
 import org.godfat.Helper;
 import de.polygonal.ds.Array2;
 import flash.display.Sprite;
@@ -98,7 +98,7 @@ public class PrivateBlock{
       for(var x: int = 0; x<xcount; ++x)
         avatars_.set(x, y, new Avatar(pick_master(), parent_, option_, function(){
           if(++loaded == option_.block_count) done_callback();
-        }, option_.avatar_block_width*x, option_.avatar_block_height*y));
+        }, option_.avatarblock_width*x, option_.avatarblock_height*y));
   }
 
   internal function clear_avatars(): PrivateBlock{
@@ -108,7 +108,7 @@ public class PrivateBlock{
   }
   internal function set_avatar(x: int, y: int, a: Avatar): PrivateBlock{
     avatars_.set(x, y, a);
-    a.move(option_.avatar_block_width*x, option_.avatar_block_height*y);
+    a.move(option_.avatarblock_width*x, option_.avatarblock_height*y);
     return this;
   }
   internal function make_avatar(master: Master, callback: Function = null,

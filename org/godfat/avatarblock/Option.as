@@ -1,6 +1,6 @@
 
-package org.godfat.avatar_block{
-import org.godfat.avatar_block.block_imps.BlockImpRandom;
+package org.godfat.avatarblock{
+import org.godfat.avatarblock.block_imps.BlockImpRandom;
 import flash.utils.Dictionary;
 
 public class Option{
@@ -55,8 +55,8 @@ public class Option{
   public function set fake_master(a: Function): void{data_["fake_master"] = a;}
 
   public function get block_count(): int{return block_xcount*block_ycount;}
-  public function get avatar_block_width(): Number{return avatar_width+spacer_width;}
-  public function get avatar_block_height(): Number{return avatar_height+spacer_height;}
+  public function get avatarblock_width(): Number{return avatar_width+spacer_width;}
+  public function get avatarblock_height(): Number{return avatar_height+spacer_height;}
 
   private var data_: Dictionary = new Dictionary();
 }

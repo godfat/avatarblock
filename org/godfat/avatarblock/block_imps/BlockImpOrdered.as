@@ -1,8 +1,8 @@
 
-package org.godfat.avatar_block.block_imps{
-import org.godfat.avatar_block.Avatar;
-import org.godfat.avatar_block.Master;
-import org.godfat.avatar_block.Block;
+package org.godfat.avatarblock.block_imps{
+import org.godfat.avatarblock.Avatar;
+import org.godfat.avatarblock.Master;
+import org.godfat.avatarblock.Block;
 import org.godfat.Helper;
 import flash.utils.setTimeout;
 

@@ -1,5 +1,5 @@
 
-package org.godfat.avatar_block{
+package org.godfat.avatarblock{
 import org.godfat.Image;
 import org.godfat.Helper;
 import flash.display.Sprite;
@@ -77,7 +77,7 @@ public class Avatar{
     body_.width = option_.avatar_width*2 + option_.spacer_width +1;
     body_.height = option_.avatar_height*2 + option_.spacer_height +1;
     const xy: Array = Helper.for_xy(region, 0, option_.block_xcount);
-    move(xy[0]*option_.avatar_block_width, xy[1]*option_.avatar_block_height);
+    move(xy[0]*option_.avatarblock_width, xy[1]*option_.avatarblock_height);
   }
   public function slide_to(direct: int, callback: Function = null){
     // see Helper#x_offset/y_offset
