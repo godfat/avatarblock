@@ -17,7 +17,7 @@ import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Option;
 import org.godfat.avatarblock.Helper;
-import de.polygonal.ds.Array2;
+import org.godfat.avatarblock.Array2;
 import flash.display.Sprite;
 import flash.xml.XMLNode;
 import flash.utils.setTimeout;
@@ -102,7 +102,7 @@ public class PrivateBlock{
   }
 
   internal function clear_avatars(): PrivateBlock{
-    avatars_.toArray().forEach(function(i: Avatar, index, array){i.cleanup();});
+    avatars_.forEach(function(i: Avatar, index, array){i.cleanup();});
     avatars_.clear();
     return this;
   }
