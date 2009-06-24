@@ -1,5 +1,5 @@
 
-package org.godfat{
+package org.godfat.avatarblock{
 import flash.utils.Dictionary;
 import flash.xml.XMLNode;
 

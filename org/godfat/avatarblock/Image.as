@@ -1,5 +1,5 @@
 
-package org.godfat{
+package org.godfat.avatarblock{
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.display.Loader;
