@@ -10,7 +10,6 @@ import flash.xml.XMLNode;
 
 class Photo extends Master{
   static public function make_master(data: XMLNode): Master{ return new Photo(data); }
-  static public var description: String;
 
   public function Photo(data: XMLNode){ super(data); }
   public override function get avatar_uri(): String{
