@@ -9,7 +9,7 @@ public class Array2{
     clear();
   }
 
-  public function get size():   int{ return width * height; }
+  public function size():       int{ return width * height; }
   public function get width():  int{ return width_; }
   public function get height(): int{ return height_; }
   // don't call this unless you know what you are doing
