@@ -54,7 +54,10 @@ public class PrivateBlock{
     init_mode(imp_.work);
   }
 
-  public function move(x: Number, y: Number){ parent_.x = x; parent_.y = y; }
+  public function move(x: Number, y: Number): PrivateBlock{
+    parent_.x = x; parent_.y = y;
+    return this;
+  }
   public function get avatars(): Array2{ return avatars_; }
 
   internal function get masters(): Array{ return masters_; }
