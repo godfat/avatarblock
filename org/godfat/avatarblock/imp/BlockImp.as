@@ -16,8 +16,7 @@ public class BlockImp{
   public function work(){ throw new ArgumentError("don't even call this."); }
   public function pick_master(): Master{ return undefined; }
 
-  private function get block(): Block{ return block_; }
-
+  protected function get block(): Block{ return block_; }
   protected function get block_masters(): Array{ return block.masters; }
   protected function get block_xcount(): int{ return block.xcount; }
   protected function get block_ycount(): int{ return block.ycount; }

@@ -55,9 +55,9 @@ public class PrivateBlock{
   }
 
   public function move(x: Number, y: Number){ parent_.x = x; parent_.y = y; }
+  public function get avatars(): Array2{ return avatars_; }
 
   internal function get masters(): Array{ return masters_; }
-  // internal function get avatars(): Array2{ return avatars_; }
   internal function get xcount(): int{ return option_.block_xcount; }
   internal function get ycount(): int{ return option_.block_ycount; }
   internal function get count(): int{ return option_.block_count; }
