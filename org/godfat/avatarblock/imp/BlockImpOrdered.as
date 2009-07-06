@@ -9,6 +9,7 @@ import flash.utils.setTimeout;
 public class BlockImpOrdered extends BlockImp{
   static public function make_imp(block: Block): BlockImp{ return new BlockImpOrdered(block); }
   function BlockImpOrdered(block: Block){ super(block); }
+
   public override function work(){
     if(disable_) return;
 
@@ -22,6 +23,7 @@ public class BlockImpOrdered extends BlockImp{
       }
     );
   }
+
   public override function pick_master(): Master{
     if(block_masters.length > 0){
       masters_.push(block_masters.shift());
