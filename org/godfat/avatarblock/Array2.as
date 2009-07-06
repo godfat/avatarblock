@@ -28,6 +28,10 @@ public class Array2{
     return x + y * width;
   }
 
+  public function offset2xy(offset: int): Array{
+    return [offset % width, Math.floor(offset / width)]
+  }
+
   public function clear(): Array2{
     fill(null);
     return this;
