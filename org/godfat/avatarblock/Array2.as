@@ -16,15 +16,15 @@ public class Array2{
   public function get data(): Array{ return data_; }
 
   public function get(x: int, y: int): *{
-    return data_[offset(x, y)];
+    return data_[xy2offset(x, y)];
   }
 
   public function set(x: int, y: int, value: *): Array2{
-    data_[offset(x, y)] = value;
+    data_[xy2offset(x, y)] = value;
     return this;
   }
 
-  public function offset(x: int, y: int): int{
+  public function xy2offset(x: int, y: int): int{
     return x + y * width;
   }
 
