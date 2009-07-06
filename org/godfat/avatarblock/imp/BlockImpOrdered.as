@@ -16,9 +16,10 @@ public class BlockImpOrdered extends BlockImp{
     const region: int = block_pick_region();
     const direct: int = block_pick_direct();
     const xy: Array = Util.for_xy(region, direct, block_xcount);
-    const picked: Avatar = block_make_avatar(
+
+    const avatar: Avatar = block_make_avatar(
       masters_[xy[1]*block_xcount+xy[0]], function(){
-        block_work(picked, region, direct);
+        block_work(avatar, region, direct);
         setTimeout(work, 1000*5);
       }
     );

@@ -11,8 +11,8 @@ public class BlockImpRandom extends BlockImp{
   function BlockImpRandom(block: Block){ super(block); }
 
   public override function work(){
-    const picked: Avatar = block_make_avatar(pick_master(), function(){
-      block_work(picked);
+    const avatar: Avatar = block_make_avatar(pick_master(), function(){
+      block_work(avatar);
       setTimeout(work, 1000*5);
     });
   }
