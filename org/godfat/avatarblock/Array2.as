@@ -47,6 +47,14 @@ public class Array2{
     return this;
   }
 
+  public function indexOf(value: *): Array{
+    const index: int = data_.indexOf(value);
+    if(index == -1)
+      return [-1, -1];
+    else
+      return offset2xy(index);
+  }
+
   public function toArray(): Array{
     return data_.map(function(v){return v;});
   }
