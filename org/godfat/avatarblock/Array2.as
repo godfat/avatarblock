@@ -55,6 +55,10 @@ public class Array2{
       return offset2xy(index);
   }
 
+  public function offsetOf(value: *): int{
+    return data_.indexOf(value);
+  }
+
   public function toArray(): Array{
     return data_.map(function(v){return v;});
   }
