@@ -1,3 +1,4 @@
 * make Frame and Mask optional
+* extract speed to Option.as
 * refactoring
 * more examples
