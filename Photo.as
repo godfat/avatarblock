@@ -16,12 +16,11 @@ class Photo extends Master{
     return attr('img_attr')['src'];
   }
 
-  public override function set avatar(a: Avatar){
+  public override function on_avatar_init(a: Avatar){
     if(a){
       a.body.useHandCursor = true;
       a.body.buttonMode = true;
     }
-    super.avatar = a;
   }
 
   public override function on_click(event: MouseEvent){

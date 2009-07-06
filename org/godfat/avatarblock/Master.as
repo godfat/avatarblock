@@ -21,13 +21,10 @@ public class Master{
   public function attr(name: String){ return data_[name]; }
   public function get avatar_uri(): String{ return ""; }
   public function on_click(event: MouseEvent){}
-
-  public function get avatar(): Avatar{ return avatar_; }
-  public function set avatar(a: Avatar){ avatar_ = a; }
+  public function on_avatar_init(avatar: Avatar){}
 
   private var source_: XMLNode;
   private var data_: Dictionary;
-  private var avatar_: Avatar;
 }
 
 }

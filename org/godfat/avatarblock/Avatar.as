@@ -24,14 +24,13 @@ public class Avatar{
     // init click event
     body_.addEventListener(MouseEvent.CLICK, owner_.on_click);
 
-    // init master controll
-    owner_.avatar = this;
+    // init callback
+    owner_.on_avatar_init(this);
 
     move(x, y);
   }
 
   public function cleanup(){
-    owner_.avatar = null;
     img_.cleanup();
     img_ = null;
     parent_.removeChild(body_);
