@@ -7,12 +7,6 @@ import flash.utils.clearInterval;
 import flash.events.MouseEvent;
 
 public class Avatar{
-  // public static const BorderWidth: Number = 6;
-  // public static const BorderHeight: Number = 6;
-  // public static const Width: Number = 50;
-  // public static const Height: Number = 50;
-  // public static const BlockWidth: Number = Width + BorderWidth;
-  // public static const BlockHeight: Number = Height + BorderHeight;
   public function Avatar(owner: Master, parent: Sprite,
     option: Option, callback: Function = null, x: Number = 0, y: Number = 0)
   {
