@@ -25,7 +25,7 @@ public class BlockImpOrdered extends BlockImp{
   public override function pick_master(): Master{
     if(block_masters.length > 0){
       masters_.push(block_masters.shift());
-      return masters_[masters_.length-1];
+      return Util.last(masters_);
     }
     else{
       disable_ = true;
