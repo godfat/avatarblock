@@ -1,6 +1,7 @@
 
 package org.godfat.avatarblock.imp{
 import org.godfat.avatarblock.Avatar;
+import org.godfat.avatarblock.Array2;
 import org.godfat.avatarblock.Block;
 import org.godfat.avatarblock.Master;
 
@@ -17,7 +18,8 @@ public class BlockImp{
   public function pick_master(): Master{ return undefined; }
 
   protected function get block(): Block{ return block_; }
-  protected function get block_masters(): Array{ return block.masters; }
+  protected function get block_masters(): Array { return block.masters; }
+  protected function get block_avatars(): Array2{ return block.avatars; }
   protected function get block_xcount(): int{ return block.xcount; }
   protected function get block_ycount(): int{ return block.ycount; }
   protected function get block_count(): int{ return block.count; }
