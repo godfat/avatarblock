@@ -1,3 +1,5 @@
+* add Array2#find :: Function -> Value
+
 * make Frame and Mask optional
 * extract speed to Option.as
 * refactoring
