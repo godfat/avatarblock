@@ -29,7 +29,7 @@ public class Array2{
   }
 
   public function offset2xy(offset: int): Array{
-    return [offset % width, Math.floor(offset / width)]
+    return [offset % width, int(offset / width)]
   }
 
   public function clear(): Array2{
