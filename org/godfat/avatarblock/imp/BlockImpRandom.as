@@ -11,6 +11,8 @@ public class BlockImpRandom extends BlockImp{
   function BlockImpRandom(block: Block){ super(block); }
 
   public override function work(){
+    if( block_masters.length == 0 ) return;
+
     const avatar: Avatar = block_make_avatar(pick_master(), function(){
       block_work(avatar);
       setTimeout(work, 1000*5);
@@ -18,7 +20,7 @@ public class BlockImpRandom extends BlockImp{
   }
 
   public override function pick_master(): Master{
-    return block_masters[Util.rand(block_masters.length)];
+    return block_masters[Util.rand(block_masters.length)] || block_fake_master();
   }
 }
 
