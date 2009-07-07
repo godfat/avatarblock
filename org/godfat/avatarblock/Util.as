@@ -7,14 +7,14 @@ public class Util{
   static public function strip(s: String): String{
     return s.replace(/^\s+/g, "").replace(/\s+$/g, "");
   }
+
   static public function clear(a: Array): Array{
     a.splice(0, a.length);
     return [];
   }
-  static public function last(a: Array): *{
-    return a[a.length-1];
-  }
-  // thanks to Ruby's facets' Array#shuffle
+
+  static public function last(a: Array): *{ return a[a.length-1]; }
+
   static public function shuffle(a: Array): Array{
     const s: int = a.length
     for(var j: int = 0; j<s; ++j){
@@ -29,15 +29,16 @@ public class Util{
     a.unshift(a.pop());
     return a;
   }
-  static public function rand(n: int): int{
-    return int(Math.random()*n);
-  }
+
+  static public function rand(n: int): int{ return int(Math.random()*n); }
+
   static public function loadXML(data: Dictionary, source: XMLNode){
     for each(var node: XMLNode in source.childNodes){
       data[node.nodeName] = node.childNodes[0];
       data[node.nodeName + "_attr"] = node.attributes;
     }
   }
+
   static public function for_xy(region: int, direct: int, xcount: int): Array{
     return [   (region % (xcount-1)) + x_offset(direct),
             int(region / (xcount-1)) + y_offset(direct)];
@@ -54,6 +55,7 @@ public class Util{
     }
     return undefined;
   }
+
   static public function y_offset(direct: int): int{
     // 0 1
     // 2 3
