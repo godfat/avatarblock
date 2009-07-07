@@ -7,14 +7,14 @@ import flash.utils.clearInterval;
 import flash.events.MouseEvent;
 
 public class Avatar{
-  public function Avatar(owner: Master, parent: Sprite,
+  public function Avatar(master: Master, parent: Sprite,
     option: Option, callback: Function = null, x: Number = 0, y: Number = 0)
   {
-    owner_ = owner;
+    master_ = master;
     parent_ = parent;
     option_ = option;
     body_ = Sprite(parent_.addChild(new Sprite()));
-    img_ = new Image(owner_.avatar_uri, body_, option_.avatar_width, option_.avatar_height, callback);
+    img_ = new Image(master_.avatar_uri, body_, option_.avatar_width, option_.avatar_height, callback);
     img_.mask = new Mask();
 
     var frame: Frame = new Frame();
@@ -22,10 +22,10 @@ public class Avatar{
     body_.addChild(frame);
 
     // init click event
-    body_.addEventListener(MouseEvent.CLICK, owner_.on_click);
+    body_.addEventListener(MouseEvent.CLICK, master_.on_click);
 
     // init callback
-    owner_.on_avatar_init(this);
+    master_.on_avatar_init(this);
 
     move(x, y);
   }
@@ -36,11 +36,12 @@ public class Avatar{
     parent_.removeChild(body_);
     body_ = null;
     parent_ = null;
-    owner_ = null;
+    master_ = null;
   }
 
   public function move(x: Number, y: Number){ body_.x = x; body_.y = y; }
   public function get body(): Sprite{ return body_; }
+  public function get master(): Master{ return master_; }
 
   public function fade_out(callback: Function = null){
     var step: int = 0;
@@ -134,7 +135,7 @@ public class Avatar{
     body_.height = option_.avatar_height;
   }
 
-  private var owner_: Master;
+  private var master_: Master;
   private var parent_: Sprite;
   private var body_: Sprite;
   private var img_: Image;
