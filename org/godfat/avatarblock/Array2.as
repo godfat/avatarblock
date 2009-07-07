@@ -24,6 +24,13 @@ public class Array2{
     return this;
   }
 
+  public function find(predicate: Function): *{
+    for(var i: int = 0; i < size(); ++i){
+      if( predicate(data_[i]) ) return i;
+    }
+    return null;
+  }
+
   public function xy2offset(x: int, y: int): int{
     return x + y * width;
   }
