@@ -6,9 +6,9 @@ import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Util;
 import flash.utils.setTimeout;
 
-public class BlockImpOrdered extends BlockImp{
-  static public function make_imp(block: Block): BlockImp{ return new BlockImpOrdered(block); }
-  function BlockImpOrdered(block: Block){ super(block); }
+public class BlockImpFixed extends BlockImp{
+  static public function make_imp(block: Block): BlockImp{ return new BlockImpFixed(block); }
+  function BlockImpFixed(block: Block){ super(block); }
 
   public override function work(){
     if(disable_) return;
