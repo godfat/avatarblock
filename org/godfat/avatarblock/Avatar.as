@@ -8,7 +8,7 @@ import flash.events.MouseEvent;
 
 public class Avatar{
   public function Avatar(master: Master, parent: Sprite,
-    option: Option, callback: Function = null, x: Number = 0, y: Number = 0)
+    option: Option, callback: Function = null, x: int = 0, y: int = 0)
   {
     master_ = master;
     parent_ = parent;
@@ -39,9 +39,17 @@ public class Avatar{
     master_ = null;
   }
 
-  public function move(x: Number, y: Number){ body_.x = x; body_.y = y; }
+  public function get x(): int{ return x_; }
+  public function get y(): int{ return y_; }
   public function get body(): Sprite{ return body_; }
   public function get master(): Master{ return master_; }
+
+  public function move(x: int, y: int): Avatar{
+    x_ = x; y_ = y;
+    body_.x = option_.avatarblock_width  * this.x;
+    body_.y = option_.avatarblock_height * this.y;
+    return this;
+  }
 
   public function fade_out(callback: Function = null){
     var step: int = 0;
@@ -69,7 +77,7 @@ public class Avatar{
     body_.width = option_.avatar_width*2 + option_.spacer_width +1;
     body_.height = option_.avatar_height*2 + option_.spacer_height +1;
     const xy: Array = Util.for_xy(region, 0, option_.block_xcount);
-    move(xy[0]*option_.avatarblock_width, xy[1]*option_.avatarblock_height);
+    move(xy[0], xy[1]);
   }
   public function slide_to(direct: int, callback: Function = null){
     // see Util#x_offset/y_offset
@@ -140,6 +148,8 @@ public class Avatar{
   private var body_: Sprite;
   private var img_: Image;
   private var option_: Option;
+  private var x_: int;
+  private var y_: int;
 }
 
 }

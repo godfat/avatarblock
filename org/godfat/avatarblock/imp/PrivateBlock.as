@@ -101,7 +101,7 @@ public class PrivateBlock{
       for(var x: int = 0; x<xcount; ++x)
         avatars_.set(x, y, new Avatar(pick_master(), parent_, option_, function(){
           if(++loaded == option_.block_count) done_callback();
-        }, option_.avatarblock_width*x, option_.avatarblock_height*y));
+        }, x, y));
   }
 
   internal function clear_avatars(): PrivateBlock{
@@ -111,7 +111,7 @@ public class PrivateBlock{
   }
   internal function set_avatar(x: int, y: int, a: Avatar): PrivateBlock{
     avatars_.set(x, y, a);
-    a.move(option_.avatarblock_width*x, option_.avatarblock_height*y);
+    a.move(x, y);
     return this;
   }
   internal function make_avatar(master: Master, callback: Function = null,
