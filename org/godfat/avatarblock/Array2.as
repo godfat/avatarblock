@@ -26,7 +26,7 @@ public class Array2{
 
   public function find(predicate: Function): *{
     for(var i: int = 0; i < size(); ++i){
-      if( predicate(data_[i]) ) return i;
+      if( predicate(data_[i]) ) return data_[i];
     }
     return null;
   }

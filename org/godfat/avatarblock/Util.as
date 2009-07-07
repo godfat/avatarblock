@@ -26,7 +26,7 @@ public class Util{
     return a;
   }
 
-  static public function id(a: *): *{ return a; }
+  static public function id(a: *, dummy0 = null, dummy1 = null): *{ return a; }
 
   static public function rotate(a: Array): Array{
     a.unshift(a.pop());
