@@ -46,6 +46,7 @@ public class Util{
     return [   (region % (xcount-1)) + x_offset(direct),
             int(region / (xcount-1)) + y_offset(direct)];
   }
+
   static public function x_offset(direct: int): int{
     // 0 1
     // 2 3
