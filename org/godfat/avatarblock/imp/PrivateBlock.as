@@ -142,6 +142,7 @@ public class PrivateBlock{
   {
     const xy: Array = Util.for_xy(region, direct, xcount);
     avatars_.set(xy[0], xy[1], picked);
+     picked.move(xy[0], xy[1]);
     zombie.cleanup();
   }
 
