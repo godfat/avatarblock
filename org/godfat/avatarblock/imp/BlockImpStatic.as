@@ -8,10 +8,7 @@ public class BlockImpStatic extends BlockImp{
   function BlockImpStatic(block: Block){ super(block); }
   public override function work(){}
   public override function pick_master(): Master{
-    if(block_masters.length > 0)
-      return block_masters.shift();
-    else
-      return block_fake_master();
+    return block_masters.shift() || block_fake_master();
   }
 }
 
