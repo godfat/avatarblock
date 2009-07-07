@@ -110,8 +110,7 @@ public class PrivateBlock{
     return this;
   }
   internal function set_avatar(x: int, y: int, a: Avatar): PrivateBlock{
-    avatars_.set(x, y, a);
-    a.move(x, y);
+    update_avatar(x, y, a);
     return this;
   }
   internal function make_avatar(master: Master, callback: Function = null,
@@ -141,9 +140,12 @@ public class PrivateBlock{
     zombie: Avatar)
   {
     const xy: Array = Util.for_xy(region, direct, xcount);
-    avatars_.set(xy[0], xy[1], picked);
-     picked.move(xy[0], xy[1]);
+    update_avatar(xy[0], xy[1], picked);
     zombie.cleanup();
+  }
+
+  private function update_avatar(x: int, y: int, avatar: Avatar){
+    avatars_.set(x, y, avatar.move(x, y));
   }
 
   private var source_: XMLNode;
