@@ -1,3 +1,4 @@
+* switch from setTimeout to enterFrame based
 * make Frame and Mask optional
 * extract speed to Option.as
 * refactoring
