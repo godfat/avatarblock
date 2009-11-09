@@ -1,6 +1,6 @@
 
 package{
-import org.godfat.Image;
+import org.godfat.Wrapper;
 import org.godfat.avatarblock.Block;
 import org.godfat.avatarblock.Option;
 import org.godfat.avatarblock.imp.BlockImpRandom;
@@ -17,7 +17,7 @@ public class example{
   public static var text: String;
 
   public function example(parent: Sprite){
-    Image.ie_hack = false;
+    Wrapper.ie_hack = false;
 
     const option: Option = new Option();
 

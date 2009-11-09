@@ -1,6 +1,6 @@
 
 package org.godfat.avatarblock{
-import org.godfat.Image;
+import org.godfat.Wrapper;
 import flash.display.Sprite;
 import flash.net.URLRequest;
 import flash.utils.setInterval;
@@ -15,7 +15,7 @@ public class Avatar{
     parent_ = parent;
     option_ = option;
     body_ = Sprite(parent_.addChild(new Sprite()));
-    img_ = new Image(master_.avatar_uri, body_, option_.avatar_width, option_.avatar_height, callback);
+    img_ = new Wrapper(master_.avatar_uri, body_, option_.avatar_width, option_.avatar_height, callback);
     img_.mask = new Mask();
 
     var frame: Frame = new Frame();
@@ -147,7 +147,7 @@ public class Avatar{
   private var master_: Master;
   private var parent_: Sprite;
   private var body_: Sprite;
-  private var img_: Image;
+  private var img_: Wrapper;
   private var option_: Option;
   private var x_: int;
   private var y_: int;

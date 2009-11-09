@@ -7,9 +7,9 @@ import flash.net.URLRequest;
 import flash.events.Event;
 import flash.events.IOErrorEvent;
 
-public class Image{
+public class Wrapper{
   static public var ie_hack: Boolean = false;
-  public function Image(uri: String, parent: Sprite,
+  public function Wrapper(uri: String, parent: Sprite,
     width: Number, height: Number,
     callback: Function = null)
   {
@@ -26,7 +26,7 @@ public class Image{
     });
     body_.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, callback || function(){});
 
-    if( Image.ie_hack )
+    if( Wrapper.ie_hack )
       body_.load(new URLRequest(uri+"?for_suck_ie="+Math.random().toString()));
     else
       body_.load(new URLRequest(uri));
