@@ -13,11 +13,11 @@
 // 9. back to 0.
 
 package org.godfat.avatarblock.imp{
+import org.godfat.Array2;
 import org.godfat.avatarblock.Avatar;
 import org.godfat.avatarblock.Master;
 import org.godfat.avatarblock.Option;
 import org.godfat.avatarblock.Util;
-import org.godfat.avatarblock.Array2;
 import flash.display.Sprite;
 import flash.xml.XMLNode;
 import flash.utils.setTimeout;

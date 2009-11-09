@@ -1,7 +1,7 @@
 
 package org.godfat.avatarblock.imp{
+import org.godfat.Array2;
 import org.godfat.avatarblock.Avatar;
-import org.godfat.avatarblock.Array2;
 import org.godfat.avatarblock.Block;
 import org.godfat.avatarblock.Master;
 

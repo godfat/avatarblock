@@ -1,7 +1,7 @@
 
 package{
+import org.godfat.Image;
 import org.godfat.avatarblock.Block;
-import org.godfat.avatarblock.Image;
 import org.godfat.avatarblock.Option;
 import org.godfat.avatarblock.imp.BlockImpRandom;
 

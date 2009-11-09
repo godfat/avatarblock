@@ -1,5 +1,5 @@
 
-package org.godfat.avatarblock{
+package org.godfat{
 
 public class Array2{
   public function Array2(width: int, height: int){
